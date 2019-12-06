@@ -1,14 +1,15 @@
-import random
-from math import pi, cos, sin
-
+import os, random, math
+import matplotlib.pyplot as plt
 import numpy as np
+
 from matplotlib import pyplot
+from visualization.files_utils import *
 from matplotlib.patches import Circle
 
 def random_point(xy, r):
     r = float(r)
-    theta = random.random() * 2 * pi
-    return xy[0] + cos(theta) * r, xy[1] + sin(theta) * r
+    theta = random.random() * 2 * math.pi
+    return xy[0] + math.cos(theta) * r, xy[1] + math.sin(theta) * r
 
 
 def plot(vectors, radius, words, fig, ax):
@@ -44,3 +45,17 @@ def plot_dic(circles_dic, figure_title, filtered_words=[]):
     radius = [values[-1] for values in circles_dic.values()]
     vectors = [np.multiply(np.array(values[:2]), values[-2]) for values in circles_dic.values()]
     plot(vectors, radius, words, fig, ax)
+
+
+def visualize(circles_file_path, words_to_show_file_path):
+    output_file_path, output_file_ext = os.path.splitext(circles_file_path)
+    output_file_before = output_file_path + "_before" + output_file_ext
+    output_file_after = output_file_path + "_after" + output_file_ext
+    circles_dic_before = {}
+    words_to_show = read_words_to_show_file(words_to_show_file_path)
+    read_balls_file(output_file_before, circles_dic_before)
+    plot_dic(circles_dic_before, 'Circles before fixing', words_to_show)
+    circles_dic_after = {}
+    read_balls_file(output_file_after, circles_dic_after)
+    plot_dic(circles_dic_after, 'Circles after fixing', words_to_show)
+    plt.show()

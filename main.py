@@ -1,8 +1,11 @@
-import os
-from generate_tree import generate_files
-from transformation_2d import reduce_and_fix, visualize
 import argparse
+import os
+
 from balls_generation import train_word2ball, initialize_dictionaries
+from tree_generation.generate_tree import generate_files
+from visualization.circles_fixer import reduce_and_fix
+from visualization.ploting import visualize
+
 
 def main():
     parser = argparse.ArgumentParser()
