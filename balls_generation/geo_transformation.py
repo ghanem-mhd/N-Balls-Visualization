@@ -1,9 +1,9 @@
 import numpy as np
 import decimal
-from nball4tree.config import DECIMAL_PRECISION
-from nball4tree.util_train import get_children
-from nball4tree.util_file import create_ball_file
-from nball4tree.util_vec import vec_cos, vec_norm, vec_point, qsr_DC_degree, qsr_P_degree, rotate
+from balls_generation.config import DECIMAL_PRECISION
+from balls_generation.util_train import get_children
+from balls_generation.util_file import create_ball_file
+from balls_generation.util_vec import vec_cos, vec_norm, vec_point, qsr_DC_degree, qsr_P_degree, rotate
 
 decimal.getcontext().prec = DECIMAL_PRECISION
 

@@ -2,7 +2,7 @@ import os
 from generate_tree import generate_files
 from transformation_2d import reduce_and_fix, visualize
 import argparse
-from nball4tree import train_word2ball, initialize_dictionaries, testing_whole_family
+from balls_generation import train_word2ball, initialize_dictionaries
 
 def main():
     parser = argparse.ArgumentParser()

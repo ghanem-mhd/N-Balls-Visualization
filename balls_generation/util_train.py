@@ -1,5 +1,5 @@
 import decimal
-from nball4tree.config import DECIMAL_PRECISION
+from balls_generation.config import DECIMAL_PRECISION
 
 decimal.getcontext().prec = DECIMAL_PRECISION
 

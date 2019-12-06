@@ -5,12 +5,12 @@ import decimal
 import operator
 import numpy as np
 from distutils.dir_util import copy_tree
-from nball4tree.config import cgap, L0, R0, DIM, DECIMAL_PRECISION
-from nball4tree.util_train import get_children
-from nball4tree.util_vec import vec_norm, qsr_DC, qsr_DC_degree, qsr_P, qsr_P_degree,  dis_between_ball_centers
-from nball4tree.util_file import create_ball_file, load_balls, get_ball_from_file, merge_balls_into_file, \
+from balls_generation.config import cgap, L0, R0, DIM, DECIMAL_PRECISION
+from balls_generation.util_train import get_children
+from balls_generation.util_vec import vec_norm, qsr_DC, qsr_DC_degree, qsr_P, qsr_P_degree,  dis_between_ball_centers
+from balls_generation.util_file import create_ball_file, load_balls, get_ball_from_file, merge_balls_into_file, \
     initialize_dictionaries
-from nball4tree.geo_transformation import ratio_homothetic_DC_transform, homothetic_recursive_transform_of_decendents,\
+from balls_generation.geo_transformation import ratio_homothetic_DC_transform, homothetic_recursive_transform_of_decendents,\
     shift_whole_tree_of
 
 decimal.getcontext().prec = DECIMAL_PRECISION

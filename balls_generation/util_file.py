@@ -2,8 +2,8 @@ import os
 import decimal
 from collections import defaultdict
 from nltk.corpus import wordnet as wn
-from nball4tree.config import DECIMAL_PRECISION
-from nball4tree.util_vec import vec_norm
+from balls_generation.config import DECIMAL_PRECISION
+from balls_generation.util_vec import vec_norm
 
 decimal.getcontext().prec = DECIMAL_PRECISION
 
