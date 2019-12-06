@@ -1,5 +1,5 @@
 import os
-from visualization.files_utils import *
+from utils.files_utils import *
 from visualization.dimensions_utils import reduce_dimensions
 from visualization.checker import check_all_tree
 from visualization.transformation_2d import fix_one_family

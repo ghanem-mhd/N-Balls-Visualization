@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from matplotlib import pyplot
-from visualization.files_utils import *
+from utils.files_utils import *
 from matplotlib.patches import Circle
 
 def random_point(xy, r):

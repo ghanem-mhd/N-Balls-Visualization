@@ -1,5 +1,6 @@
 from collections import defaultdict
 from nltk.corpus import wordnet as wn
+from utils.files_utils import *
 
 input_examples_words_mapping = {
     'Cities': ['City', 'Berlin', 'London', 'Tokyo', 'Paris', 'Singapore', 'Amsterdam', 'Seoul'],
@@ -124,31 +125,6 @@ def generate_ws_cat_codes(words_paths_file="", children_file="", outFile="", dep
         ofh.write(line)
     ofh.close()
     return nm, ml
-
-
-def write_data_to_file(file_path, lines):
-    with open(file_path, 'w') as file:
-        for line in lines:
-            file.write(line)
-            if not '\n' in line:
-                file.write("\n")
-
-
-def read_word2vec_file(glove_file_path):
-    glove_words_set = set()
-    with open(glove_file_path, mode="r", encoding="utf-8") as file:
-        for line in file:
-            glove_words_set.add(line[:-1].split()[0])
-    return glove_words_set
-
-
-def read_input_words(input_file_path):
-    words = []
-    with open(input_file_path, mode="r", encoding="utf-8") as file:
-        for line in file:
-            words.extend([x.strip() for x in str(line).split(',')])
-    return words
-
 
 def generate_files(word2vec_file_path=None, input_file_path=None, sample=None, output_path=None):
     glove_words = read_word2vec_file(word2vec_file_path)
