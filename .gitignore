@@ -58,5 +58,5 @@ ENV/
 # IDE files
 .idea/
 
-visualization/.ipynb_checkpoints
+jupyter-notebooks/.ipynb_checkpoints
 data/
