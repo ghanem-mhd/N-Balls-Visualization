@@ -140,10 +140,14 @@ def generate_files(word2vec_file_path=None, input_file_path=None, sample=None, o
     words_paths = generate_words_paths(words, glove_words)
     if len(words_paths) <= 0:
         print('No words paths found! Try Again!')
+        return None, None
     else:
         print_words_paths_summery(words_paths)
         children = generate_child(words_paths)
+        if len(children) == 1:
+            return None, None
         print_children_summery(children)
         write_data_to_file(generated_child_file, children)
         write_data_to_file(words_paths_file, words_paths)
         generate_ws_cat_codes(words_paths_file, generated_child_file, cat_code, depth=15)
+        return generated_child_file, cat_code

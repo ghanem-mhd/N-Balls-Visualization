@@ -1,3 +1,6 @@
+import os, glob, shutil
+
+
 def save_data(file_path, circles_dic):
     with open(file_path, 'w') as file:
         for word, values in circles_dic.items():
@@ -58,3 +61,14 @@ def read_input_words(input_file_path):
         for line in file:
             words.extend([x.strip() for x in str(line).split(',')])
     return words
+
+
+def set_up_data_folder(output_path):
+    if not os.path.isdir(output_path):
+        os.mkdir(output_path)
+    else:
+        for file in glob.glob(output_path + "/*"):
+            if "glove" not in file and "data_out" not in file and "input" not in file:
+                os.remove(file)
+            elif "data_out" in file:
+                shutil.rmtree(file)
