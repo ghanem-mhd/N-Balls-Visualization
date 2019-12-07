@@ -17,4 +17,31 @@ After setting up Anaconda or installing the requirements by yourself, please tak
   implort nltk
   nltk.donwload()
   ```
+  
+## N-Balls Generatation: 
+You can use the package to generate the balls for a set of words. This step is optional and can be skipped if you already have the balls generated. 
 
+### Input:
+* **Set of words:**  You can either choose one of the predefined samples or just enter your words in English only.
+* **Pre-trained word embeddings:** You have to give a path to file which contains a pre-trained word embedding. In case you don't have this file you can download from [here](https://drive.google.com/open?id=1Liu7AynOXXv7gWXVs4npuKAZeSygbGWQ). The file provided in the previous link taken from [GloVe](https://nlp.stanford.edu/projects/glove/) (6B tokens, 400K vocab, uncased, 50d).
+
+### Output:
+* **Nballs:** A file contains the balls in high dimensions with the tree structure perfectly encoded.
+
+### Using  [Jupyter notebook](https://github.com/ghanem-mhd/N-Balls-Visualization/blob/master/jupyter_notebooks/nballs-generation.ipynb):
+
+The jupyter notebook is consist from only one cell. To generate the balls follow the following steps:
+1. Run the cell. A drop down list will be shown. Select one of the samples provided or custom option.
+2. If you select custom option, another input field will be shown to let you enter you words comma separated. Click check button to move to the next step.
+3. After selecting the input sample or the custom option another input field will be shown to provide a word2vector file path.
+4. After providing the file path, click on generate balls button.
+5. The log will be shown to indicate the status of the process. You can find the generate balls file in the data directory of the project.
+
+### Using Command-line:
+Run the following command:
+```
+python main.py --generate_nballs --input INPUT_FILE --w2v WORD2VECTOR_FILE --output OUTPUT_FILE_PATH
+```
+* --input: A file contains words. Each line should contain one word.
+* --w2v: A file of pre-trained word embeddings.
+* --output: The output directory.
