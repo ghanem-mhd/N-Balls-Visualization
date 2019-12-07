@@ -7,7 +7,9 @@ The package can be used in two ways. The first one by running the [Jupyter Noteb
 
 We recommend to install [Anaconda](https://www.anaconda.com/distribution/) as it contains all the required dependencies to run this package. Otherwise if you prefer to do it the hard way, feel free to install all the requirements for this package.
 
-In case you want to use jupyter notebooks, please make sure you have the latest version of [Ipywidgets](https://github.com/jupyter-widgets/ipywidgets) package. Also, if you want to use the package to generate balls, make sure you already downloaded Wordnet resource by running the following:
+In case you want to use jupyter notebooks, please make sure you have the latest version of [Ipywidgets](https://github.com/jupyter-widgets/ipywidgets) package. 
+
+In case you want to use the package to generate balls regardless of using jupyter notebooks or command line, make sure you already downloaded Wordnet resource by running the following:
 ```
 implort nltk
 nltk.donwload()
