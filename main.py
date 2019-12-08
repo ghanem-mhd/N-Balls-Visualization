@@ -49,6 +49,7 @@ def main():
                             outputBallFile=n_balls_file_path)
             if os.path.exists(n_balls_file_path):
                 print("Finish generating balls successfully")
+                print("N-balls file can be found in ", n_balls_file_path)
             else:
                 print("Finish generating balls unsuccessfully")
 
