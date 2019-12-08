@@ -77,3 +77,22 @@ python main_vis.py --reduceAndFix --balls BALLS_FILE_PATH --children CHILDREN_FI
 * --output: The output file which contains the circles. The path will be used to generate two files one contains the circles before applying the algorithm and one after applying the algorithm.
 
 After applying the executing this step, the result of three check operations will be shown. Each operation checks whether the tree structure is maintained by checking two conditions, namely disjoint and contains conditions. The first operation is performed on the input balls. The second one is performed on the circles before running the fixing of the algorithm. The third one is performed on the circles after running the algorithm.
+
+## Visualization
+During this step, the circles from the second step will be visualized. In the visualization, every circle corresponds to a word. The word is shown at a random point on the circle perimeter with the same color as the circle.
+
+### Visualization options explanation:
+* **Filter:** You can use the filter to show or hide certain words. The filter can be operated in two modes: SubTree and Individual.
+* **SubTree Filter Mode:** In this mode, whenever you hide one of the words all children will be hidden. Also, whenever you check one of the words all the ancestors of the words will be shown.
+* **Individual Filter Mode:** In this mode, hiding or showing a word will only affect the words itself.
+* **Show All:** This button will show all words.
+* **Hide All:** This button will hide all words.
+* **Circles:** This toggle button is to switch between the circles before and after applying the algorithm.
+
+### Running through command-line:
+Please note that using the Iupyter notebook will be more useful as we can directly filter some words.
+```
+python main_vis.py --vis --circles CIRCLES_FILE_PATH --showenWords WORDS_FILE_PATH
+```
+* --circles: A path to the file used in the [Reducing Dimensionality](Reducing-Dimensionality).
+* --showenWords: A path to file contains the words that should be visualized. Each line should contain one word. This parameter is optional and if it is not present all words will be visualized.
