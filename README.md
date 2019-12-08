@@ -9,7 +9,7 @@ The process consists of three steps:
 2. [Reducing Dimensionality](#reducing-dimensionality)
 3. [Visualization](#visualization)
 
-If you already have the balls in high dimensions you can skip the first step and go directly to [setp 2](reducing-dimensionality).
+If you already have the balls in high dimensions you can skip the first step and go directly to [step 2](reducing-dimensionality).
 
 ## Getting Started
 The package can be used in two ways. The first one by running the [Jupyter Notebooks](https://github.com/ghanem-mhd/N-Balls-Visualization/tree/master/jupyter_notebooks). The second one is just through command line by running the desired function. 
@@ -37,9 +37,9 @@ You can use the package to generate the balls for a set of words. This step is o
 ### Output:
 * **Nballs:** A file contains the balls in high dimensions with the tree structure perfectly encoded.
 
-### Using  [Jupyter notebook](https://github.com/ghanem-mhd/N-Balls-Visualization/blob/master/jupyter_notebooks/nballs-generation.ipynb):
+### Using Jupyter notebook:
 
-The jupyter notebook is consist from only one cell. To generate the balls follow the following steps:
+Open [Nballs Generation Notebook](https://github.com/ghanem-mhd/N-Balls-Visualization/blob/master/jupyter_notebooks/nballs-generation.ipynb). The notebook is consist from only one cell. To generate the balls follow the following steps:
 1. Run the cell. A drop down list will be shown. Select one of the samples provided or custom option.
 2. If you select custom option, another input field will be shown to let you enter you words comma separated. Click check button to move to the next step.
 3. After selecting the input sample or the custom option another input field will be shown to provide a word2vector file path.
@@ -76,9 +76,8 @@ The input of this step is the following:
 * **Output After:** A file contains the circles after applying PCA and fixing the broken relationships.
 * Both files can be found in the data folder of the project.
 
-### Using  [Jupyter notebook](https://github.com/ghanem-mhd/N-Balls-Visualization/blob/master/jupyter_notebooks/interactive_visualization.ipynb):
-
-The jupyter notebook is consist from two cells. To reduce the dimensions follow the following steps:
+### Using  Jupyter notebook:
+Open [Interactive Visualization Notebook](https://github.com/ghanem-mhd/N-Balls-Visualization/blob/master/jupyter_notebooks/interactive_visualization.ipynb). To reduce the dimensions follow the following steps:
 1. Run the first cell. Two file upload buttons will be shown. One for balls files and the other for children file.
 2. Select the corresponding files for each one. After choosing the files the reduce button will be enabled.  
 3. Click on reduce button and see the result.
@@ -91,7 +90,7 @@ python main_vis.py --reduceAndFix --balls BALLS_FILE_PATH --children CHILDREN_FI
 * --children: A file contains the child-parent relationships between the balls.
 * --output: The output file which contains the circles. The path will be used to generate two files one contains the circles before applying the algorithm and one after applying the algorithm.
 
-### Printed output explanation:
+### Console output explained:
 After executing this step, the result of three check operations will be shown. Each operation checks whether the tree structure is maintained by checking two conditions, namely disjoint and contains conditions. The first operation is performed on the input balls. The second one is performed on the circles before running the fixing of the algorithm. The third one is performed on the circles after running the algorithm.
 
 ## Visualization
@@ -106,7 +105,7 @@ During this step, the circles from the second step will be visualized. In the vi
 * **Circles:** This toggle button is to switch between the circles before and after applying the algorithm.
 
 ### Running through command-line:
-Please note that using the Iupyter notebook will be more useful as we can directly filter some words.
+Please note that using the Jupyter notebook will be more useful as we can directly filter some words.
 ```
 python main_vis.py --vis --circles CIRCLES_FILE_PATH --showenWords WORDS_FILE_PATH
 ```
