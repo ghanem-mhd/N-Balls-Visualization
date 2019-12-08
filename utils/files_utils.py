@@ -24,7 +24,9 @@ def read_children_file(ws_children_file, children_dic=None):
         children_dic = dict()
     with open(ws_children_file, 'r') as children_file:
         for ln in children_file:
-            tokens = ln[:-1].split()
+            if ln is None or ln == "":
+                continue
+            tokens = ln.split()
             children_dic[tokens[0]] = tokens[1:]
         return children_dic
 
