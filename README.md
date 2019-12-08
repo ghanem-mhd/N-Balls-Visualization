@@ -102,5 +102,5 @@ Please note that using the Iupyter notebook will be more useful as we can direct
 ```
 python main_vis.py --vis --circles CIRCLES_FILE_PATH --showenWords WORDS_FILE_PATH
 ```
-* --circles: A path to the file used in the [Reducing Dimensionality](Reducing-Dimensionality).
+* --circles: A path to the file used in the [Reducing Dimensionality](#reducing-dimensionality).
 * --showenWords: A path to file contains the words that should be visualized. Each line should contain one word. This parameter is optional and if it is not present all words will be visualized.
