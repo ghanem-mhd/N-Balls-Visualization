@@ -149,14 +149,14 @@ python main.py --vis --circles CIRCLES_FILE_PATH --showenWords WORDS_FILE_PATH
 ### Examaple 1:
 This small example demonstrate how the visualization is keeping the topological structure of the balls. This example contains 4 balls. The parent is capital.n.03 with three children: berlin.n.01, amsterdam.n.01 and paris.n.01. The first two balls berlin.n.01 and amsterdam.n.01 are externally discontent. The child ball paris.n.01 is internally contained in the parent ball. After reducing the dimensions the circles corresponding to the balls are still have the same topological relationships. The following picture showing the result of the plotting.
 
-The input files for this example can be be downloaded from [here](https://drive.google.com/open?id=1YV9hSLGvXT7temwTOinFZkdRp5wLMK6b).
+The input files for this example can be be downloaded from [here](https://drive.google.com/open?id=1BzLZfzH4liqaPIus93vsMVCGe0Qa_z82).
 
 ![Example 1 plotting](https://github.com/ghanem-mhd/N-Balls-Visualization/blob/master/pic/example1.PNG)
 
 ### Examaple 2:
 This example demonstrates how the visualization is able to remove the overlapping that resulted from the dimensions reduction. The examples contains 55 balls and can be generated using the sample provided in the generating balls step. After reducing the dimensions some the balls became overlapped. The fixing algorithm fixed this overlapping. The following picture showing the result of the plotting before after after running the fixing algorithm.
 
-The input files for this example can be be downloaded from [here](https://drive.google.com/open?id=1pHTWBRNPn9N_h0s6TlJcpKKjIdNE2NZk).
+The input files for this example can be be downloaded from [here](https://drive.google.com/open?id=13NtdXFUYaHEFwVy_U6qCP-LyvNWYJGyA).
 
 ![Example 2 plotting](https://github.com/ghanem-mhd/N-Balls-Visualization/blob/master/pic/example2.PNG)
 
