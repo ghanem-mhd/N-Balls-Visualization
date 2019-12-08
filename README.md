@@ -154,7 +154,7 @@ The input files for this example can be be downloaded from [here](https://drive.
 ![Example 1 plotting](https://github.com/ghanem-mhd/N-Balls-Visualization/blob/master/pic/example1.PNG)
 
 ### Examaple 2:
-This example demonstrates how the visualization is able to remove the overlapping that resulted from the dimensions reduction. The examples contains 55 balls and can be generated using the sample provided in the generating balls step. After reducing the dimensions some the balls became overlapped. The fixing algorithm fixed this overlapping. The following picture showing the result of the plotting before after after running the fixing algorithm.
+This example demonstrates how the visualization is able to remove the overlapping that resulted from the dimensions reduction. The examples contains 55 balls and can be generated using the sample provided in the generating balls step. After reducing the dimensions some of the balls became overlapped while they should be disjoint as they are sibling. The following picture showing the result of the plotting before after after running the fixing algorithm. In the image below a filter is being used to only show the overlapped circles.
 
 The input files for this example can be be downloaded from [here](https://drive.google.com/open?id=13NtdXFUYaHEFwVy_U6qCP-LyvNWYJGyA).
 
