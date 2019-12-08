@@ -145,8 +145,8 @@ python main.py --vis --circles CIRCLES_FILE_PATH --showenWords WORDS_FILE_PATH
 * --circles: A path to the file used in the [Reducing Dimensionality](#reducing-dimensionality).
 * --showenWords: A path to file contains the words that should be visualized. Each line should contain one word. This parameter is optional and if it is not present all words will be visualized.
 
-# Examples:
-## Examaple 1:
+## Examples:
+### Examaple 1:
 This small example demonstrate how the visualization is keeping the topological structure of the balls. This example contains 4 balls. The parent is capital.n.03 with three children: berlin.n.01, amsterdam.n.01 and paris.n.01. The first two balls berlin.n.01 and amsterdam.n.01 are externally discontent. The child ball paris.n.01 is internally contained in the parent ball. After reducing the dimensions the circles corresponding to the balls are still have the same topological relationships. The following picture showing the result of the plotting.
 ![Example 1 plotting](https://github.com/ghanem-mhd/N-Balls-Visualization/blob/master/pic/example1.PNG)
 
