@@ -134,7 +134,7 @@ def generate_files(word2vec_file_path=None, input_file_path=None, sample=None, o
         words = input_examples_words_mapping[sample]
 
     words_paths_file = output_path + '/small.wordSensePath.txt'
-    generated_child_file = output_path + '/small.children.txt'
+    generated_child_file = output_path + '/children.txt'
     cat_code = output_path + '/small.catcode.txt'
 
     words_paths = generate_words_paths(words, glove_words)
