@@ -45,3 +45,13 @@ python main.py --generate_nballs --input INPUT_FILE --w2v WORD2VECTOR_FILE --out
 * --input: A file contains words. Each line should contain one word.
 * --w2v: A file of pre-trained word embeddings.
 * --output: The output directory.
+
+## N-Balls Visualization:
+The package will visualize the balls in 2d.  The dimensions of the balls will be reduced to be 2. In other words, the balls will be converted to circles. In this step, the PCA method is used to reduce the dimensions. During the PCA, some of the tree relationships are not maintained e.g. siblings circles might be overlapped or child circle located outside its parent circle an algorithm is being used to fix these broken relationships.
+
+### The Fixing Algorithm:
+The idea behind the algorithm is to fix the broken relationships between circles while keeping its topological structure. The algorithm uses the information provided by the tree structure and the balls in high dimensions to determine whether two circles need to be modified to recover the original status between them. The algorithm checks two conditions the first one is "Is disjoint" and the second one is "Is contained". The first condition is being checked for all children of one family. The second one is being checked for a parent of one family with its children.
+
+If the first condition is not satisfied which means two circles are overlapping while they should be disjoint, the two circles will be scaled down (only radius) by a factor which makes the two circles disjoint. If one of the circles has children, all children will also be scaled down and shifted. By doing so all the topological relationships between the children of the circles will be kept.
+
+If the second condition is not satisfied which means a child circle is located or overlapping with its parent, the parent circle will be scaled up (only radius) by a factor which makes the child circle located inside its parent. Also in case, the parent circles contain other child circles, all of them will be scaled by the same factor and shifted.
