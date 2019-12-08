@@ -53,8 +53,8 @@ def main():
                 print("Finish generating balls unsuccessfully")
 
     if args.reduceAndFix:
-        if args.balls and args.children and args.output:
-            reduce_and_fix(args.balls, args.children, args.output)
+        if args.balls and args.children and args.output_path:
+            reduce_and_fix(args.balls, args.children, args.output_path)
 
     if args.vis and args.circles:
         visualize(args.circles, args.showenWords)
