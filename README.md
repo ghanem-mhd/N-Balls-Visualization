@@ -100,7 +100,7 @@ The input of this step is the following:
 Open [Interactive Visualization Notebook](https://github.com/ghanem-mhd/N-Balls-Visualization/blob/master/jupyter_notebooks/interactive_visualization.ipynb). To reduce the dimensions follow the following steps:
 1. Run the first cell. Two file upload buttons will be shown. One for balls files and the other for children file.
 2. Select the corresponding files for each one. After choosing the files the reduce button will be enabled.  
-3. Click on reduce button and check the [result](#console-output-explanation).
+3. Click on reduce button and check the result. Check [here](#console-output-explanation) for more info about the result.
 
 ### Using Command-line:
 ```
