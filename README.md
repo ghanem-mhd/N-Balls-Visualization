@@ -100,7 +100,7 @@ The input of this step is the following:
 Open [Interactive Visualization Notebook](https://github.com/ghanem-mhd/N-Balls-Visualization/blob/master/jupyter_notebooks/interactive_visualization.ipynb). To reduce the dimensions follow the following steps:
 1. Run the first cell. Two file upload buttons will be shown. One for balls files and the other for children file.
 2. Select the corresponding files for each one. After choosing the files the reduce button will be enabled.  
-3. Click on reduce button and check the [result]((#console-output-explanation)).
+3. Click on reduce button and check the [result](#console-output-explanation).
 
 ### Using Command-line:
 ```
@@ -147,7 +147,7 @@ python main.py --vis --circles CIRCLES_FILE_PATH --showenWords WORDS_FILE_PATH
 
 ## Examples:
 ### Examaple 1:
-This small example demonstrate how the visualization is keeping the topological structure of the balls. This example contains 4 balls. The parent is capital.n.03 with three children: berlin.n.01, amsterdam.n.01 and paris.n.01. The first two balls berlin.n.01 and amsterdam.n.01 are externally discontent. The child ball paris.n.01 is internally contained in the parent ball. After reducing the dimensions the circles corresponding to the balls are still have the same topological relationships. The following picture showing the result of the plotting.
+This small example demonstrate how the visualization is keeping the topological structure of the balls. This example contains 4 balls. The parent is capital.n.03 with three children: berlin.n.01, amsterdam.n.01 and paris.n.01. The first two balls berlin.n.01 and amsterdam.n.01 are externally disconnected. The child ball paris.n.01 is internally contained in the parent ball. After reducing the dimensions the circles corresponding to the balls are still have the same topological relationships. The following picture showing the result of the plotting.
 
 The input files for this example can be be downloaded from [here](https://drive.google.com/open?id=1BzLZfzH4liqaPIus93vsMVCGe0Qa_z82).
 
